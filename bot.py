@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-def login_twitter(username, password):
+def login_twitter(username, password, text):
 
     driver = webdriver.Chrome()
     driver.get("https://twitter.com/login")
@@ -20,7 +20,7 @@ def login_twitter(username, password):
 
     textbox = driver.find_element_by_id('tweet-box-home-timeline')
 
-    textbox.send_keys("""Im using Selenium!""")
+    textbox.send_keys(text)
 
     submit = driver.find_element_by_class_name("tweet-action")
 
@@ -30,4 +30,5 @@ def login_twitter(username, password):
 if __name__ == '__main__':
     username = "h1168636@nwytg.com"
     password = "asdasd123"
-    login_twitter(username, password)
+    text = """Im using Selenium!"""
+    login_twitter(username, password, text)
