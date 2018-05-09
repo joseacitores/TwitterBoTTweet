@@ -1,3 +1,10 @@
+'''
+Authors :
+Jose Miguel Acitores
+Alberto Soutullo
+U-Tad - 2018/05/09
+'''
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
